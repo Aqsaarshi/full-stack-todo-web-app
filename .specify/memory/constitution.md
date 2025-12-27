@@ -1,55 +1,40 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT
+Version change: N/A -> 1.0.0
+Modified principles: N/A (new constitution)
+Added sections: All principles and sections for Todo In-Memory CLI Application
+Removed sections: N/A
+Templates requiring updates: ✅ no changes needed - .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
+Follow-up TODOs: RATIFICATION_DATE needs to be set to actual ratification date
+-->
+# Todo In-Memory CLI Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Modular Design
+Code must be organized in a modular fashion with clear separation of concerns; Each module should have a single responsibility; Functions and classes should be reusable and independently testable
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### CLI-First Interface
+All functionality must be accessible through a command-line interface; CLI should accept commands and arguments for all core features; User interactions follow a clear command structure (add, view, update, delete, mark)
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Spec-Driven Development
+Specifications must be written before implementation; All features must have clear, testable requirements documented in spec files; Implementation follows specifications exactly with no deviations without spec updates
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### In-Memory Storage
+Task data is stored in memory during application runtime; No persistent storage outside of memory; Data persistence is not required for this implementation
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### CRUD Operations Completeness
+All core CRUD operations (Create, Read, Update, Delete) must be fully implemented; Each operation must handle appropriate error cases; Task completion/incompletion must be properly tracked
 
-### [PRINCIPLE_6_NAME]
+### Clean Code Standards
+Code must follow Python PEP 8 standards; Proper documentation with docstrings required; Code should be readable and maintainable with meaningful variable and function names
 
+## Development Requirements
+Python 3.13+ required; Project structure must follow /src for source code and /specs_history for specification files; All code must be documented with usage instructions in README.md
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Quality Assurance
+All features must be tested before implementation completion; Code review required before merging; Specifications must be updated when functionality changes
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+All development must follow the defined principles; Changes to this constitution require explicit approval; All code must comply with the established project structure and development workflow
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): to be set to actual ratification date | **Last Amended**: 2025-12-26
